@@ -1,11 +1,9 @@
 
-# Чтение данных из файла
 file = open("26-62.txt").read()
 lines = file.strip().split("\n")
-N, M = map(int, lines[0].split())  # Количество товаров и бюджет
+N, M = map(int, lines[0].split())  
 items = [line.split() for line in lines[1:]]
 
-# Разделяем товары по типам и сортируем по цене
 Q_items = sorted([int(price) for price, t in items if t == "Q"])
 Z_items = sorted([int(price) for price, t in items if t == "Z"])
 
